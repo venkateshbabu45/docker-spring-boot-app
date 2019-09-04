@@ -13,7 +13,7 @@ pipeline {
     }
     stage('Build Project and Generate Docker Images') {
       steps {
-        sh 'mvn clean package'
+        sh 'mvn -B -DskipTests clean package'
         sh 'echo $USER'
         sh 'echo whoami'
       }
